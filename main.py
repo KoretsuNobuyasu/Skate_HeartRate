@@ -24,6 +24,7 @@ def main(argv):
     if (len(argv) != 0):
         for arg in argv:        
             if(arg == 'help'):
+                os.system('open -n -a "Google Chrome" https://dev.fitbit.com/apps/details/22DFZH ')
                 help = '''
                 Januaryを入力すれば1月の心拍数が取得できます
                 Februaryを入力すれば2月の心拍数が取得できます
@@ -37,9 +38,11 @@ def main(argv):
                 Octoberを入力すれば10月の心拍数が取得できます
                 Novemberを入力すれば11月の心拍数が取得できます
                 Decemberを入力すれば12月の心拍数が取得できます
+                InitializeでCLIENT_IDなどの情報を入手後、心拍数を取得してください
                 '''
                 print(help)
             elif(arg == 'Initialize'):
+                #os.system('open -n -a "Google Chrome" https://dev.fitbit.com/apps/details/22DFZH ')
                 CLIENT_ID = input("CLIENT_IDを入力してください")
                 CLIENT_SECRET = input("CLIENT_SECRETを入力してください")
                 ACCESS_TOKEN = input("ACCESS_TOKENを入力してください")
